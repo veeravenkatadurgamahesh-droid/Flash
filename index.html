@@ -1,12 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flash</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flash Grocery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    header {
+      background: white;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #ff5a1f;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    button {
+      background: #ff5a1f;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      padding-bottom: 90px;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .offer {
+      background: #fff1e8;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 14px;
+    }
+
+    .emoji {
+      font-size: 42px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">⚡ Flash</div>
+    <div>Best deals in seconds</div>
+    <button>Login</button>
+  </header>
+
+  <main>
+    <input type="text" placeholder="Search groceries..." />
+
+    <div class="offer">
+      <h2>Save more on daily groceries</h2>
+      <p>Find the lowest prices and best offers near you.</p>
+      <button>Explore Deals</button>
+    </div>
+
+    <h2>🔥 Lowest Prices</h2>
+
+    <div class="products">
+      <div class="card">
+        <div class="emoji">🍚</div>
+        <h3>Premium Rice</h3>
+        <p>5 kg</p>
+        <strong>₹320</strong><br /><br />
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🥛</div>
+        <h3>Fresh Milk</h3>
+        <p>1 litre</p>
+        <strong>₹60</strong><br /><br />
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🍎</div>
+        <h3>Fresh Apples</h3>
+        <p>1 kg</p>
+        <strong>₹150</strong><br /><br />
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🥚</div>
+        <h3>Farm Eggs</h3>
+        <p>12 pieces</p>
+        <strong>₹90</strong><br /><br />
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>🏠 Home</span>
+    <span>📂 Categories</span>
+    <span>🔍 Search</span>
+    <span>🛒 Cart</span>
+    <span>👤 Profile</span>
+  </footer>
+</body>
 </html>
